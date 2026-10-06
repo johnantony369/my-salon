@@ -17,7 +17,7 @@ describe('Superadmin Authorization (isSuperAdmin)', () => {
 
   it('rejects other email addresses', () => {
     expect(isSuperAdmin({ email: 'johnantony@gmail.com' })).toBe(false);
-    expect(isSuperAdmin({ email: 'shopowner@mymobileshop.app' })).toBe(false);
+    expect(isSuperAdmin({ email: 'salonowner@mysalon.app' })).toBe(false);
     expect(isSuperAdmin({ email: 'admin@google.com' })).toBe(false);
   });
 

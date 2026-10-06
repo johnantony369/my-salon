@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * CLI utility to generate valid activation codes for My Mobile Shop.
+ * CLI utility to generate valid activation codes for MySalon.
  * Usage: node scripts/gen-code.js [count]
  */
 
@@ -36,7 +36,7 @@ function generateCode() {
 const count = parseInt(process.argv[2], 10) || 5;
 
 console.log(`\n========================================`);
-console.log(`My Mobile Shop — Activation Code Generator`);
+console.log(`MySalon — Activation Code Generator`);
 console.log(`Generating ${count} valid activation code(s)...`);
 console.log(`========================================\n`);
 
