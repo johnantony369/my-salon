@@ -9,7 +9,8 @@ import {
   Calendar,
   Plus,
   AlertCircle,
-  Receipt,
+  ReceiptIndianRupee,
+  IndianRupee,
   User,
   ChevronRight,
   TrendingUp,
@@ -133,7 +134,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           {pendingPaymentsTotal > 0 && (
             <div className="bg-[#FFF0F0] border border-[#FFCDD2] rounded-[16px] p-3 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <Receipt className="w-4 h-4 text-[#D32F2F] shrink-0" />
+                <ReceiptIndianRupee className="w-4 h-4 text-[#D32F2F] shrink-0" />
                 <span className="text-[13px] font-medium text-[#C62828]">
                   <strong>{formatINR(pendingPaymentsTotal)}</strong> pending payments to collect
                 </span>
@@ -184,7 +185,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         <Card className="p-3.5 flex flex-col justify-between min-h-[92px]">
           <div className="flex items-center justify-between text-[#6B6B6B]">
             <span className="text-[11px] font-bold uppercase tracking-wider">Pending</span>
-            <Receipt className="w-4 h-4 text-[#FF9500]" />
+            <ReceiptIndianRupee className="w-4 h-4 text-[#FF9500]" />
           </div>
           <div className="mt-2">
             <span
@@ -231,7 +232,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           onClick={() => onNewBill()}
           className="h-12 bg-white hover:bg-gray-50 active:scale-[0.98] text-[#171717] border border-black/[0.08] rounded-[16px] text-[14px] font-bold flex items-center justify-center gap-2 shadow-xs transition-all"
         >
-          <Receipt className="w-4 h-4 stroke-[2]" />
+          <IndianRupee className="w-4 h-4 stroke-[2.2]" />
           <span>New Sale / Bill</span>
         </button>
       </div>
@@ -262,7 +263,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#171717] text-white text-[12px] font-bold rounded-full shadow-xs active:scale-95 transition-all"
             >
               <Plus className="w-3.5 h-3.5" />
-              <span>+ New Appointment</span>
+              <span>New Appointment</span>
             </button>
           </Card>
         ) : (

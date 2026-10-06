@@ -261,9 +261,11 @@ export function LoginModal({
 
         {/* Header */}
         <div className="mb-6 text-center">
-          <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner">
-            <Store className="w-7 h-7" />
-          </div>
+          <img
+            src="/icon-192.png"
+            alt="MySalon"
+            className="w-14 h-14 rounded-2xl mx-auto mb-3 shadow-md border border-black/5 object-cover"
+          />
           <h2 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {view === 'password'
               ? mode === 'login'
@@ -303,13 +305,13 @@ export function LoginModal({
             <form onSubmit={handlePasswordSubmit} className="space-y-3.5">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1">
-                  Login ID / Shop ID
+                  Login ID / Salon ID
                 </label>
                 <div className="flex items-center gap-2.5 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 bg-slate-50 dark:bg-slate-800/80 focus-within:ring-2 focus-within:ring-blue-500 transition-all">
                   <Store className="w-4 h-4 text-slate-400 shrink-0" />
                   <input
                     type="text"
-                    placeholder="e.g. keralamobile or email"
+                    placeholder="e.g. keralasalon or email"
                     value={loginId}
                     onChange={e => setLoginId(e.target.value)}
                     className="w-full bg-transparent text-sm font-medium text-slate-900 dark:text-white outline-none"

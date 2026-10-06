@@ -11,7 +11,7 @@ import {
   Plus,
   Phone,
   MessageCircle,
-  Receipt,
+  ReceiptIndianRupee,
   X,
   ChevronLeft,
   ChevronRight,
@@ -221,7 +221,7 @@ export const AppointmentsScreen: React.FC<AppointmentsScreenProps> = ({
             className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#171717] text-white text-[12px] font-bold rounded-full shadow-xs active:scale-95 transition-all"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>+ Add Appointment</span>
+            <span>Add Appointment</span>
           </button>
         </Card>
       ) : (
@@ -307,7 +307,7 @@ export const AppointmentsScreen: React.FC<AppointmentsScreenProps> = ({
                     }}
                     className="flex items-center gap-1 text-[#007AFF] font-bold active:scale-95"
                   >
-                    <Receipt className="w-3.5 h-3.5" />
+                    <ReceiptIndianRupee className="w-3.5 h-3.5" />
                     <span>Collect Payment</span>
                   </button>
                 )}
@@ -425,7 +425,7 @@ export const AppointmentsScreen: React.FC<AppointmentsScreenProps> = ({
                 }}
                 className="w-full py-3 bg-[#171717] hover:bg-[#2C2C2E] text-white rounded-[14px] text-[14px] font-bold flex items-center justify-center gap-2 shadow-sm"
               >
-                <Receipt className="w-4 h-4" />
+                <ReceiptIndianRupee className="w-4 h-4" />
                 <span>Collect Payment / Generate Bill</span>
               </button>
 

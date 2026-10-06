@@ -116,6 +116,11 @@ export const PaywallModal: React.FC<PaywallModalProps> = ({
 
         <div className="px-5 pt-2 pb-3 space-y-4">
           <div className="text-center">
+            <img
+              src="/icon-192.png"
+              alt="MySalon"
+              className="w-14 h-14 rounded-2xl mx-auto mb-2.5 shadow-md border border-black/5 object-cover"
+            />
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#8E8E93]">
               Simple Salon Management
             </span>

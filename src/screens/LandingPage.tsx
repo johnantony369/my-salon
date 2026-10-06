@@ -46,9 +46,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ isAuthenticated = fals
       <header className="sticky top-0 z-40 bg-[#F6F5F3]/90 backdrop-blur-md border-b border-black/[0.05]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="w-8 h-8 rounded-[10px] bg-[#171717] text-white flex items-center justify-center font-black text-sm">
-              S
-            </div>
+            <img
+              src="/icon-192.png"
+              alt="MySalon"
+              className="w-8 h-8 rounded-[10px] shadow-xs object-cover border border-black/5"
+            />
             <span className="text-lg font-black tracking-tight text-[#171717]">MySalon</span>
           </div>
 

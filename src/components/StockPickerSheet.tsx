@@ -158,7 +158,7 @@ export const StockPickerSheet: React.FC<StockPickerSheetProps> = ({
               className="flex items-center space-x-1 text-iosBlue text-xs font-semibold active:opacity-75 py-1 px-2 shrink-0"
             >
               <Plus className="w-3.5 h-3.5" />
-              <span>+ Add New</span>
+              <span>Add New</span>
             </button>
           </div>
 

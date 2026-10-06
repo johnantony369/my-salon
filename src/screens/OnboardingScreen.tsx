@@ -81,9 +81,11 @@ export const OnboardingScreen: React.FC<OnboardingScreenProps> = ({ onComplete }
       <div className="pt-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-[10px] bg-[#171717] text-white flex items-center justify-center font-black text-sm">
-              S
-            </div>
+            <img
+              src="/icon-192.png"
+              alt="MySalon"
+              className="w-8 h-8 rounded-[10px] shadow-xs object-cover border border-black/5"
+            />
             <span className="text-[17px] font-extrabold text-[#171717] tracking-tight">
               MySalon
             </span>
