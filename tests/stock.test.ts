@@ -97,7 +97,7 @@ describe('Stock & Inventory Management System', () => {
     expect(deleted?.deletedAt).toBeDefined();
   });
 
-  it('seeds default mobile shop essentials (products and services)', async () => {
+  it('seeds default salon essentials (products and services)', async () => {
     const count = await seedDefaultStockItems();
     expect(count).toBeGreaterThanOrEqual(15);
 

@@ -83,8 +83,8 @@ describe('Multi-Account Isolation and Local DB Wiping', () => {
   });
 
   it('initAppSettings correctly assigns ownerUid to settings', async () => {
-    const settings = await initAppSettings('Ali Mobile Shop', 'en', true, true, 'uid-user-b');
-    expect(settings.shopName).toBe('Ali Mobile Shop');
+    const settings = await initAppSettings('Ali Beauty Salon', 'en', true, true, 'uid-user-b');
+    expect(settings.shopName).toBe('Ali Beauty Salon');
     expect(settings.ownerUid).toBe('uid-user-b');
 
     const loaded = await getAppSettings();
