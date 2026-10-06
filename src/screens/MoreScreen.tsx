@@ -5,6 +5,8 @@ import { StaffManager } from './StaffManager';
 import { ReportsManager } from './ReportsManager';
 import { SettingsManager } from './SettingsManager';
 import { Card } from '../components/iOSComponents';
+import { useAuth } from '../firebase/useAuth';
+import { clearLocalDatabase } from '../db/db';
 import {
   Scissors,
   Users,
@@ -12,6 +14,7 @@ import {
   Settings as SettingsIcon,
   ChevronRight,
   ChevronLeft,
+  LogOut,
 } from 'lucide-react';
 
 interface MoreScreenProps {
@@ -67,6 +70,19 @@ export const MoreScreen: React.FC<MoreScreenProps> = ({
       </div>
     );
   }
+
+  const { user, signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    if (confirm('Are you sure you want to log out? Local data will be preserved securely.')) {
+      if (user) {
+        await signOut();
+      } else {
+        await clearLocalDatabase();
+      }
+      window.location.reload();
+    }
+  };
 
   const menuItems = [
     {
@@ -139,6 +155,18 @@ export const MoreScreen: React.FC<MoreScreenProps> = ({
             </Card>
           );
         })}
+
+        {/* Logout action */}
+        <div className="pt-3">
+          <button
+            type="button"
+            onClick={handleSignOut}
+            className="w-full bg-white hover:bg-red-50/50 active:scale-98 rounded-[18px] p-4 flex items-center justify-center gap-2 border border-black/[0.06] shadow-xs text-iosRed font-bold text-[15px] transition-all"
+          >
+            <LogOut className="w-4 h-4 stroke-[2.5]" />
+            <span>Log Out</span>
+          </button>
+        </div>
       </div>
     </div>
   );
