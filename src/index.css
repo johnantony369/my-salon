@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F6F5F3;
+  color: #171717;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+  padding-top: var(--sat);
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+  user-select: none;
+}
+
+/* Fluid momentum scrolling utility */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* iOS active state feedback */
+.ios-active {
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+.ios-active:active {
+  opacity: 0.75;
+  transform: scale(0.98);
+}
+
+/* iOS tactile button tap */
+.ios-press {
+  transition: transform 140ms cubic-bezier(0.25, 1, 0.5, 1), opacity 140ms ease;
+}
+.ios-press:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* Hairline separator */
+.hairline-b {
+  border-bottom: 0.5px solid rgba(60, 60, 67, 0.2);
+}
+.hairline-t {
+  border-top: 0.5px solid rgba(60, 60, 67, 0.2);
+}
+
+/* Screen transition */
+@keyframes iosFadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-slide-in {
+  animation: iosFadeSlideIn 200ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Modal pop */
+@keyframes iosDialogPop {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-dialog-pop {
+  animation: iosDialogPop 180ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+/* Smooth highlight for freshly created items */
+@keyframes entryHighlight {
+  0% {
+    background-color: rgba(52, 199, 89, 0.16);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.animate-entry-highlight {
+  animation: entryHighlight 700ms ease-out forwards;
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-slide-in,
+  .animate-dialog-pop,
+  .animate-entry-highlight,
+  .ios-active,
+  .ios-press {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
