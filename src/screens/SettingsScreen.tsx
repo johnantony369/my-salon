@@ -972,7 +972,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                 href="/"
                 className="text-xs font-semibold text-iosBlue hover:underline"
               >
-                mymobileshop.online
+                mysalon.app
               </a>
             </div>
             <div className="flex justify-between items-center py-1.5 border-b border-[#E5E5EA]">

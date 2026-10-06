@@ -16,7 +16,7 @@ export function summarizeBillItems(items: BillItem[]): string {
 }
 
 export function buildBillText(bill: Bill, shopName: string): string {
-  const shop = shopName.trim() || 'My Mobile Shop';
+  const shop = shopName.trim() || 'MySalon';
   const lines = bill.items.map(
     (it) => `${it.name} x${it.qty} = ${formatINR(it.qty * it.price)}`
   );

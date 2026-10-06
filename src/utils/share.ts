@@ -13,7 +13,7 @@ export interface ShareDataInput {
 }
 
 export function buildShareSummaryText(data: ShareDataInput): string {
-  const shop = data.shopName.trim() || 'My Mobile Shop';
+  const shop = data.shopName.trim() || 'MySalon';
   return (
     `Summary — ${shop}\n` +
     `${data.dateStr}\n` +

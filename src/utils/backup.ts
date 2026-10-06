@@ -28,7 +28,7 @@ export async function exportBackup(): Promise<void> {
 
   const jsonStr = JSON.stringify(backupData, null, 2);
   const nowStr = new Date().toISOString().slice(0, 10);
-  const fileName = `my-mobile-shop-backup-${nowStr}.json`;
+  const fileName = `mysalon-backup-${nowStr}.json`;
 
   const blob = new Blob([jsonStr], { type: 'application/json' });
 
@@ -37,7 +37,7 @@ export async function exportBackup(): Promise<void> {
   if (navigator.canShare && navigator.canShare({ files: [file] })) {
     try {
       await navigator.share({
-        title: 'My Mobile Shop Backup',
+        title: 'MySalon Backup',
         files: [file],
       });
       await updateAppSettings({ lastBackupAt: new Date().toISOString() });

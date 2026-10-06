@@ -3,7 +3,7 @@ import { cleanIndianPhone } from '../db/db';
 import { formatINR } from '../i18n';
 
 export function buildIntakeSlipMessage(job: Job, shopName: string): string {
-  const shop = shopName.trim() || 'My Mobile Shop';
+  const shop = shopName.trim() || 'MySalon';
   const est = job.estimate !== undefined && job.estimate > 0 ? formatINR(job.estimate) : 'To be estimated';
   const adv = job.advance ? formatINR(job.advance) : formatINR(0);
   const balance = job.estimate !== undefined && job.estimate > 0
@@ -24,7 +24,7 @@ export function buildIntakeSlipMessage(job: Job, shopName: string): string {
 }
 
 export function buildReadyNotificationMessage(job: Job, shopName: string): string {
-  const shop = shopName.trim() || 'My Mobile Shop';
+  const shop = shopName.trim() || 'MySalon';
   const balance = (job.estimate || 0) - (job.advance || 0);
 
   let msg = `*${shop}* — Device Ready!\n`;
@@ -37,7 +37,7 @@ export function buildReadyNotificationMessage(job: Job, shopName: string): strin
 }
 
 export function buildDeliveredSlipMessage(job: Job, shopName: string): string {
-  const shop = shopName.trim() || 'My Mobile Shop';
+  const shop = shopName.trim() || 'MySalon';
   const paid = job.finalAmount !== null && job.finalAmount !== undefined
     ? formatINR(job.finalAmount)
     : (job.estimate ? formatINR(job.estimate) : 'Paid');
