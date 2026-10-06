@@ -102,7 +102,7 @@ export const BookScreen: React.FC<BookScreenProps> = ({
               isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
-            {shopName || 'My Mobile Shop'}
+            {shopName || 'MySalon'}
           </span>
           {isScrolled && (
             <div className="flex items-center space-x-2">
@@ -129,7 +129,7 @@ export const BookScreen: React.FC<BookScreenProps> = ({
         <div className="px-4 pt-3 pb-1">
           <div className="flex items-center justify-between gap-3">
             <h1 className="text-[28px] sm:text-[30px] font-black text-black tracking-tight leading-tight truncate flex-1 min-w-0">
-              {shopName || 'My Mobile Shop'}
+              {shopName || 'MySalon'}
             </h1>
             {!isActivated && onOpenPaywall && (
               <button

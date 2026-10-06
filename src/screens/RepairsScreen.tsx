@@ -169,7 +169,7 @@ export const RepairsScreen: React.FC<RepairsScreenProps> = ({
         <div className="pt-2 flex items-start justify-between">
           <div>
             <span className="text-[13px] font-semibold text-[#8E8E93] uppercase tracking-wider block">
-              {shopName || 'My Mobile Shop'}
+              {shopName || 'MySalon'}
             </span>
             <h1 className="text-[32px] font-extrabold text-black tracking-tight leading-tight">
               Repairs

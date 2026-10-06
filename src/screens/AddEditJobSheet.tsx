@@ -24,7 +24,7 @@ export const AddEditJobSheet: React.FC<AddEditJobSheetProps> = ({
   onSaved,
   jobToEdit,
   language,
-  shopName = 'My Mobile Shop',
+  shopName = 'MySalon',
 }) => {
   const [customerName, setCustomerName] = useState('');
   const [phone, setPhone] = useState('');
